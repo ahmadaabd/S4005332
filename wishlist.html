@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wishlist</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="customization">
+        <select id="currencyDropdown">
+            <option value="AUD">AUD</option>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+        </select>
+        <button id="contactUs" onclick="location.href='contactUs.html'">Contact us </button>
+    </div>
+    
+    <div class="grid-container">
+        <!-- 1. Logo -->
+        <a href="index.html" class="logo">
+            <img src="/images/FitnessFreaks.png" alt="Website Logo" width="200px" height="100px">
+        </a>
+        
+        <!-- 2. Search Box -->
+        <div class="search">
+            <input type="text" placeholder="Search products...">
+            <button type="submit">Search</button>
+        </div>
+        
+        <div class="grid2">
+            <!-- 3. Cart Button -->
+            <div class="cart">
+                <span id="cart-size"> 0 </span>
+                <a id="cartIcon" href="cart.html" class="cart">
+                <img src="images/Cart logo.png" alt="Cart" width="20px"></a>
+            </div>
+
+            <!-- 4. Account Options -->
+            <div class="account">
+                <img src="/images/User image.png" alt="Account" width="25px">
+                <div class="account-dropdown">
+                    <a href="#">My account</a>
+                    <a href="wishlist.html">Wishlist</a>
+                    <a href="#">My Orders</a>
+                    <a href="#">Login/Register</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="nav-menu">
+        <button class="nav-button" onclick="location.href='#mens'">Mens</button>
+        <button class="nav-button" onclick="location.href='#womens'">Womens</button>
+        <button class="nav-button" onclick="location.href='#accessories'">Accessories</button>
+        <button class="nav-button" style="color: red;" onclick="location.href='#sale'"><b>Sale</b></button>
+    </div>
+    <h2>My Wishlist</h2>
+    <div id="wishlist-container">
+        <!-- Wishlist items will be displayed here -->
+    </div>
+
+    <script src="Javascript.js"></script>
+    <script>
+        var wishlist = [];
+        // Get the container where you want to display the wishlist items
+        var wishlistContainer = document.getElementById("wishlist-container");
+
+        // Loop through the items in the wishlist
+        wishlist.forEach(function (itemName) {
+            // Find the corresponding item container in the index page
+            var itemContainer = document.querySelector('.item[data-item-name="' + itemName + '"]');
+            if (itemContainer) {
+                // Parsed the JSON data from the data-item-details attribute
+                var itemDetails = JSON.parse(itemContainer.getAttribute('data-item-details'));
+
+                // Created a new element to display the wishlist item
+                var wishlistItem = document.createElement('div');
+                wishlistItem.classList.add('wishlist-item');
+
+                // Created an image element for the item
+                var itemImage = document.createElement('img');
+                itemImage.src = itemDetails.image;
+                itemImage.alt = 'Image of ' + itemDetails.name;
+
+                // Created an element for the item name
+                var itemNameElement = document.createElement('p');
+                itemNameElement.classList.add('wishlist-item-name');
+                itemNameElement.textContent = itemDetails.name;
+
+                // Created an element for the item fit
+                var itemFitElement = document.createElement('p');
+                itemFitElement.classList.add('wishlist-item-fit');
+                itemFitElement.textContent = itemDetails.fit;
+
+                // Created an element for the item price
+                var itemPriceElement = document.createElement('p');
+                itemPriceElement.classList.add('wishlist-item-price');
+                itemPriceElement.textContent = itemDetails.price;
+
+                // Appended the elements to the wishlistItem container
+                wishlistItem.appendChild(itemImage);
+                wishlistItem.appendChild(itemNameElement);
+                wishlistItem.appendChild(itemFitElement);
+                wishlistItem.appendChild(itemPriceElement);
+
+                // Appended the wishlistItem to the wishlistContainer
+                wishlistContainer.appendChild(wishlistItem);
+            }
+        });
+    </script>
+<footer>
+    <div class="lowerArea">
+        <img src="images/FitnessFreaks.png" width="25%" height="50%" style="float: left;">
+        <div class="social">
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="images/inst.png" width="75px" height="75px" alt="Instagram">
+            </a>
+            <a href="https://twitter.com" target="_blank">
+                <img src="images/twt.png" width="75px" height="75px" alt="Twitter">
+            </a>
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="images/face.png" width="75px" height="75px" alt="Facebook">
+            </a>
+            <a href="https://plus.google.com" target="_blank">
+                <img src="images/goog.png" width="75px" height="75px" alt="Google+">
+            </a>
+        </div>
+        <div class="links">
+            <a href="google.com"> Contact </a>
+            <a href="About-us.html"> About us </a>
+            <a href="Terms_and_conditions.html"> Terms & Conditions </a>
+            <a href="google.com"> Careers </a>
+            <a href="google.com"> Change Country </a>
+            <a style="padding-bottom:5%;" href="google.com"> FAQ </a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="customization">
+        <select id="currencyDropdown">
+            <option value="AUD">AUD</option>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+        </select>
+        <a id="contactUs" href="contactUs.html">Contact us</a>
+    </div>
+    
+    <div class="grid-container">
+        <!-- 1. Logo -->
+        <a href="index.html" class="logo">
+            <img src="/images/FitnessFreaks.png" alt="Website Logo" width="200px" height="100px">
+        </a>
+        
+        <!-- 2. Search Box -->
+        <div class="search">
+            <input type="text" placeholder="Search products...">
+            <button type="submit">Search</button>
+        </div>
+        
+        <div class="grid2">
+            <!-- 3. Cart Button -->
+            <div class="cart">
+                <span id="cart-size"> 0 </span>
+                <a id="cartIcon" href="cart.html" class="cart">
+                <img src="images/Cart logo.png" alt="Cart" width="20px"></a>
+            </div>
+            <!-- 4. Account Options -->
+            <div class="account">
+                <img src="/images/User image.png" alt="Account" width="25px">
+                <div class="account-dropdown">
+                    <a href="#">My account</a>
+                    <a href="wishlist.html">Wishlist</a>
+                    <a href="#">My Orders</a>
+                    <a href="registration.html">Login/Register</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="nav-menu">
+        <button class="nav-button" onclick="location.href='#mens'">Mens</button>
+        <button class="nav-button" onclick="location.href='#womens'">Womens</button>
+        <button class="nav-button" onclick="location.href='#accessories'">Accessories</button>
+        <button class="nav-button" style="color: red;" onclick="location.href='#sale'"><b>Sale</b></button>
+    </div>
+
+    <div class="contact-header">
+        <h1>Get in touch</h1>
+        <p>Want to contact us? We'd love to hear from you. Here's how you can reach us...</p>
+    </div>
+    
+        <!--Call us option-->
+        <div class="contact-section" id="callUs">
+            <div class="contact-card">
+                <div class="contact-icon">📞</div>
+                <div class="contact-title">Contact our Sales Team</div>
+                <div class="contact-description">Have a question about any of our products? Just pick up the phone to talk with a member of our sales team!</div>
+            </div>
+        </div>
+
+        <!--Message us option-->
+        <div class="contact-section" id="messageUs">
+            <div class="contact-card">
+                <div class="contact-icon">💬</div>
+                <div class="contact-title">Contact Customer Support</div>
+                <div class="contact-description">Sometimes you need a little help from your friends, or a spot. Don't worry... we're here for you!</div>
+            </div>
+        </div>
+
+    <!--Popup if user clicks on call option-->
+    <div class="callUs">
+        <div class="popupContent">
+            <span class="closeConfirmation">&times;</span>
+            <div class="contact-icon" style="text-align: center; margin-bottom: 0;">📞</div>
+            <p style="text-align: center; margin-top: 0;"><b>Call Sales</b></p>
+            <p id="phoneNum" onclick="copyToClipboard()" style="text-align: center;">+61 987654321</p>
+            <div class="opening-hours">
+                <h5 style="text-align: center; margin-top: 5px;">Opening hours</h5>
+                <p><b>Monday:</b> 9:00am - 5:00pm</p> 
+                <p><b>Wednesday:</b> 9:00am - 5:00pm</p>
+                <p><b>Thursday:</b> 9:00am - 9:00pm</p>
+                <p><b>Friday:</b> 9:00am - 9:00pm</p>
+                <p><b>Saturday:</b> 10:00am - 2:00pm</p>
+                <p><b>Sunday:</b> Closed</p>
+            </div>
+        </div>
+    </div>
+
+    <!--Popup if user clicks on message option-->
+    <div class="messageUs">
+        <div class="popupContent">
+            <span class="closeConfirmation">&times;</span>
+            <div class="contact-icon" style="text-align: center; margin-bottom: 0;">💬</div>
+            <p style="text-align: center; margin-top: 0"><b>Message us!</b></p>
+           
+            <form action="/submit_contact_form" method="post" id="contactForm">
+                <!-- Full Name Field -->
+                <div class="form-group">
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" id="fullName" name="fullName" required placeholder="John Doe">
+                </div>
+        
+                <!-- Email Field -->
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="example@email.com">
+                </div>
+        
+                <!-- Issue/Subject Field -->
+                <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" required placeholder="Issue/Subject">
+                </div>
+        
+                <!-- Message Field -->
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required placeholder="Describe your issue..."></textarea>
+                </div>
+        
+                <!-- Submit Button -->
+                <div class="form-group">
+                    <button id="submit" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="Javascript.js"></script>
+    <footer>
+        <div class="lowerArea">
+            <img src="images/FitnessFreaks.png" width="25%" height="50%" style="float: left;">
+            <div class="social">
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="images/inst.png" width="75px" height="75px" alt="Instagram">
+                </a>
+                <a href="https://twitter.com" target="_blank">
+                    <img src="images/twt.png" width="75px" height="75px" alt="Twitter">
+                </a>
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="images/face.png" width="75px" height="75px" alt="Facebook">
+                </a>
+                <a href="https://plus.google.com" target="_blank">
+                    <img src="images/goog.png" width="75px" height="75px" alt="Google+">
+                </a>
+            </div>
+            <div class="links">
+                <a href="google.com"> Contact </a>
+                <a href="About-us.html"> About us </a>
+                <a href="Terms_and_conditions.html"> Terms & Conditions </a>
+                <a href="google.com"> Careers </a>
+                <a href="google.com"> Change Country </a>
+                <a style="padding-bottom:5%;" href="google.com"> FAQ </a>
+            </div>
+        </div>
+    </footer>
+

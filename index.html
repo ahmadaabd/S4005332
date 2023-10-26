@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+   
+</head>
+<body>
+    <div class="customization">
+        <select id="currencyDropdown">
+            <option value="AUD">AUD</option>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+        </select>
+        <!-- <button id="contactUs" onclick="location.href='#contactUs'">Contact us </button> -->
+        <a id="contactUs" href="contactUs.html">Contact us</a>
+    </div>
+    
+    <div class="grid-container">
+        <!-- 1. Logo -->
+        <a href="index.html" class="logo">
+            <img src="/images/FitnessFreaks.png" alt="Website Logo" width="200px" height="100px">
+        </a>
+        
+        <!-- 2. Search Box -->
+        <div class="search">
+            <input type="text" placeholder="Search products...">
+            <button type="submit">Search</button>
+        </div>
+        
+        <div class="grid2">
+            <!-- 3. Cart Button -->
+            <div class="cart">
+                <span id="cart-size"> 0 </span>
+                <a id="cartIcon" href="cart.html" class="cart">
+                <img src="images/Cart logo.png" alt="Cart" width="20px"></a>
+            </div>
+            <!-- 4. Account Options -->
+            <div class="account">
+                <img src="/images/User image.png" alt="Account" width="25px">
+                <div class="account-dropdown">
+                    <a href="#">My account</a>
+                    <a href="wishlist.html">Wishlist</a>
+                    <a href="#">My Orders</a>
+                    <a href="registration.html">Login/Register</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="nav-menu">
+        <button class="nav-button" onclick="location.href='#mens'">Mens</button>
+        <button class="nav-button" onclick="location.href='#womens'">Womens</button>
+        <button class="nav-button" onclick="location.href='#accessories'">Accessories</button>
+        <button class="nav-button" style="color: red;" onclick="location.href='#sale'"><b>Sale</b></button>
+    </div>
+
+    <!--Adding each item-->
+    <div class="item-container">
+
+        <!--Tank Top-->
+        <div class="item" class="mens" data-item-details='{"name": "Seamless Tank Top - Black", "image": "/images/tankTop.png", "fit": "Slim Fit", "price": "$40"}'>
+            <div class="item-image-container">
+                <img src="/images/tankTop.png" alt="Seamless Tank Top - Black" width="250px">
+                <button class="wishlist-button">
+                    <img src="/images/heart.png" alt="Add to Wishlist" width="30px" class="heart">
+                </button>
+                <div class="quick-add">
+                    <div style="position: relative; margin: 0;">
+                        <img src="/images/Quickadd.png" class="quick-add-image" alt="Quick add">
+                        <p class="quick-add-text"><b>Quick add</b></p>
+                    </div>
+                    <div class="quick-add-grid">
+                        <button class="quick-add-size">XS</button>
+                        <button class="quick-add-size">S</button>
+                        <button class="quick-add-size">M</button>
+                        <button class="quick-add-size">L</button>
+                        <button class="quick-add-size">XL</button>
+                        <button class="quick-add-size">XXL</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-name">Seamless Tank Top - Black</p>
+            <p class="item-fit">Slim Fit</p>
+            <p class="item-price"><b>$40</b></p>
+        </div>
+
+        <!--Apex Shorts-->
+        <div class="item" class="mens" data-item-details='{"name": "Apex Shorts - Light Grey", "image": "/images/apexshorts.png", "fit": "Regular", "price": "$35 (Discounted)"}'>
+            <div class="item-image-container">
+                <img src="/images/apexshorts.png" alt="Apex Shorts - Light Grey" width="250px">
+                <button class="wishlist-button">
+                    <img src="/images/heart.png" alt="Add to Wishlist" width="30px" class="heart">
+                </button>
+                <div class="quick-add">
+                    <div style="position: relative; margin: 0;">
+                        <img src="/images/Quickadd.png" class="quick-add-image" alt="Quick add">
+                        <p class="quick-add-text"><b>Quick add</b></p>
+                    </div>
+                    <div class="quick-add-grid">
+                        <button class="quick-add-size">XS</button>
+                        <button class="quick-add-size">S</button>
+                        <button class="quick-add-size">M</button>
+                        <button class="quick-add-size">L</button>
+                        <button class="quick-add-size">XL</button>
+                        <button class="quick-add-size">XXL</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-name">Apex Shorts - Light Grey</p>
+            <p class="item-fit">Regular</p>
+            <p class="discounted-item-price">
+                <span style="text-decoration: line-through;">$50</span>
+                <span class="discount">$35</span>
+            </p>
+        </div>
+
+        <!--Hyperactive Leggings-->
+        <div class="item" class="womens" data-item-details='{"name": "Hyperactive Leggings - Black", "image": "/images/leggings.png", "fit": "Tight Fit", "price": "$75"}'>
+            <div class="item-image-container">
+                <img src="/images/leggings.png" alt="Hyperactive Leggings - Black" width="250px">
+                <button class="wishlist-button">
+                    <img src="/images/heart.png" alt="Add to Wishlist" width="30px" class="heart">
+                </button>
+                <div class="quick-add">
+                    <div style="position: relative; margin: 0;">
+                        <img src="/images/Quickadd.png" class="quick-add-image" alt="Quick add">
+                        <p class="quick-add-text"><b>Quick add</b></p>
+                    </div>
+                    <div class="quick-add-grid">
+                        <button class="quick-add-size">XS</button>
+                        <button class="quick-add-size">S</button>
+                        <button class="quick-add-size">M</button>
+                        <button class="quick-add-size">L</button>
+                        <button class="quick-add-size">XL</button>
+                        <button class="quick-add-size">XXL</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-name">Hyperactive Leggings - Black</p>
+            <p class="item-fit">Tight Fit</p>
+            <p class="discounted-item-price">
+                <span>$75</span>
+                <!-- <span class="discount">$35</span> --> <!--Item's not discounted-->
+            </p>
+        </div>
+
+        <!--Quarter Zip-->
+        <div class="item" class="mens" data-item-details='{"name": "Plain Quarter Zip", "image": "/images/quarterzip.png", "fit": "Body Fit", "price": "$65 (Discounted)"}'>
+            <div class="item-image-container">
+                <img src="/images/quarterzip.png" alt="Plain Quarter Zip" width="250px">
+                <button class="wishlist-button">
+                    <img src="/images/heart.png" alt="Add to Wishlist" width="30px" class="heart">
+                </button>
+                <div class="quick-add">
+                    <div style="position: relative; margin: 0;">
+                        <img src="/images/Quickadd.png" class="quick-add-image" alt="Quick add">
+                        <p class="quick-add-text"><b>Quick add</b></p>
+                    </div>
+                    <div class="quick-add-grid">
+                        <button class="quick-add-size">XS</button>
+                        <button class="quick-add-size">S</button>
+                        <button class="quick-add-size">M</button>
+                        <button class="quick-add-size">L</button>
+                        <button class="quick-add-size">XL</button>
+                        <button class="quick-add-size">XXL</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-name">Plain Quarter Zip</p>
+            <p class="item-fit">Body Fit</p>
+            <p class="discounted-item-price">
+                <span style="text-decoration: line-through;">$90</span>
+                <span class="discount">$65</span>
+            </p>
+        </div>
+
+        <!--Flex Straps-->
+        <div class="item" class="accessories" data-item-details='{"name": "Flex Straps - Coral Blue", "image": "/images/flexstraps.png", "fit": "Medium Resistance", "price": "$35 (Discounted)"}'>
+            <div class="item-image-container">
+                <img src="/images/flexstraps.png" alt="Flex Straps - Coral Blue" width="250px">
+                <button class="wishlist-button">
+                    <img src="/images/heart.png" alt="Add to Wishlist" width="30px" class="heart">
+                </button>
+                <div class="quick-add">
+                    <div style="position: relative; margin: 0;">
+                        <img src="/images/Quickadd.png" class="quick-add-image" alt="Quick add">
+                        <p class="quick-add-text"><b>Quick add</b></p>
+                    </div>
+                    <div class="quick-add-grid">
+                        <button class="quick-add-size">XS</button>
+                        <button class="quick-add-size">S</button>
+                        <button class="quick-add-size">M</button>
+                        <button class="quick-add-size">L</button>
+                        <button class="quick-add-size">XL</button>
+                        <button class="quick-add-size">XXL</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-name">Flex Straps - Coral Blue</p>
+            <p class="item-fit">Medium Resistance</p>
+            <p class="discounted-item-price">
+                <span style="text-decoration: line-through;">$40</span>
+                <span class="discount">$35</span>
+            </p>
+        </div>
+
+<!-- Hyperactive Sports Bra -->
+<div class="item" id="hyperactiveSportsBra" class="womens" data-item-details='{"name": "Hyperactive Sports Bra - White", "image": "/images/sportsbra.png", "fit": "Light Support", "price": "$45 (Discounted)"}'>
+    <a href="SportsBraWhite.html" class="no-decoration">
+        <div class="item-image-container">
+            <a href="SportsBraWhite.html"><img src="/images/sportsbra.png" alt="Hyperactive Sports Bra - White" width="250px"></a>
+            <button class="wishlist-button">
+                <img src="/images/heart.png" alt="Add to Wishlist" width="30px" class="heart">
+            </button>
+            <div class="quick-add">
+                <div style="position: relative; margin: 0;">
+                    <img src="/images/Quickadd.png" class="quick-add-image" alt="Quick add">
+                    <p class="quick-add-text"><b>Quick add</b></p>
+                </div>
+                <div class="quick-add-grid">
+                    <button class="quick-add-size">XS</button>
+                    <button class="quick-add-size">S</button>
+                    <button class="quick-add-size">M</button>
+                    <button class="quick-add-size">L</button>
+                    <button class="quick-add-size">XL</button>
+                    <button class="quick-add-size">XXL</button>
+                </div>
+            </div>
+        </div>
+        <p class="item-name">Hyperactive Sports Bra - White</p>
+        <p class="item-fit">Light Support</p>
+        <p class="discounted-item-price">
+            <span style="text-decoration: line-through;">$60</span>
+            <span class="discount">$45</span>
+        </p>
+    </a>
+</div>
+
+    </div>
+
+    <div class="consent-banner" style="display: none;">
+    <p>This website uses cookies to ensure you get the best experience on our website. <a href="cookie-policy.html">Learn more</a></p>
+    <button id="consent-accept">Accept</button>
+    <button id="consent-reject">Reject</button>
+</div>
+
+
+    <script src="Javascript.js"></script>
+    <footer>
+        <div class="lowerArea">
+            <img src="images/FitnessFreaks.png" width="25%" height="50%" style="float: left;">
+            <div class="social">
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="images/inst.png" width="75px" height="75px" alt="Instagram">
+                </a>
+                <a href="https://twitter.com" target="_blank">
+                    <img src="images/twt.png" width="75px" height="75px" alt="Twitter">
+                </a>
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="images/face.png" width="75px" height="75px" alt="Facebook">
+                </a>
+                <a href="https://plus.google.com" target="_blank">
+                    <img src="images/goog.png" width="75px" height="75px" alt="Google+">
+                </a>
+            </div>
+            <div class="links">
+                <a href="google.com"> Contact </a>
+                <a href="About-us.html"> About us </a>
+                <a href="Terms_and_conditions.html"> Terms & Conditions </a>
+                <a href="google.com"> Careers </a>
+                <a href="google.com"> Change Country </a>
+                <a style="padding-bottom:5%;" href="google.com"> FAQ </a>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

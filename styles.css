@@ -1,0 +1,1179 @@
+/* Ahmad's CSS */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Currency and Contact Us */
+.customization {
+  background-color: black;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#currencyDropdown {
+  color: #fff;
+  background-color: #000000;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+#currencyDropdown:hover {
+  background-color: #fff;
+  color:#000000;
+}
+
+#contactUs {
+  border: none;
+  padding: 5px 5px;
+  margin: 0px 10px;
+  background-color: #000000;
+  color: #fff;
+  text-decoration: none;
+}
+#contactUs:hover {
+  color:#000000;
+  background-color: #fff;
+}
+
+/* This includes logo, search function, cart, and account */
+.grid-container {
+  display: grid;
+  grid-template-columns: 50% 40% 10%;
+  gap: 20px;
+  padding: 10px 0 10px 0;
+  align-items: center;
+}
+
+.logo img,
+.cart img,
+.account img {
+  max-width: 100%;
+  cursor: pointer;
+}
+
+.search {
+  position: relative;
+  width: 70%;
+  max-width: 600px; 
+}
+
+.search input[type="text"] {
+  padding: 10px;
+  padding-right: 80px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.search button {
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-70%);
+  padding: 12px 20px; /* increased horizontal padding for aesthetic reasons */
+  border: none;
+  border-radius: 0 4px 4px 0;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+/* Grid layout for cart and account */
+.grid2 {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+}
+
+.account {
+  position: relative;
+}
+
+.account-dropdown {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  right: 70%;
+  top: 50;
+}
+
+.account-dropdown a {
+  color: black;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.account:hover .account-dropdown {
+  display: block;
+}
+
+.account-dropdown a:hover {
+  background-color: #ddd;
+}
+
+/* Navigation buttons */
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  background-color: #E6E6E6;
+  padding: 5px 0;
+}
+
+.nav-button {
+  margin: 0 10px;
+  padding: 0 10px;
+  border: none;
+  background-color: #E6E6E6;
+  color: #000000;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.nav-button:hover {
+  text-decoration: underline;
+}
+
+/* Products layout and positioning */
+.item {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 250px;
+  /* box-shadow: 0px 0px 8px rgba(0,0,0,0.1); */
+  position: relative;
+}
+
+/* Includes image, item fit, add to wishlist button price, and product name */
+.item-image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.item-image {
+  width: 100%;
+  display: block;
+}
+
+.wishlist-button {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Quick add option */
+.quick-add {
+  display: none;
+  position: absolute;
+  width: 230px;
+  height: 120px;
+  top: 170px;
+  bottom: 0;
+  left: 10px;
+  right: 0;
+  background-color: rgb(240, 240, 240);
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 3%;
+}
+
+/* Using flexbox for the grid of size buttons */
+.quick-add-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  justify-content: center;
+}
+
+.quick-add-size {
+  padding: 5px 10px;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+
+/* Quickadd buttons change colour once hovered */
+.quick-add-size:hover {
+  background-color: black;
+  color: white;
+}
+
+/* The quickadd icon */
+.quick-add-image {
+  position:absolute;
+  width: 13px;
+  left: 50px;
+  top: 3px;
+}
+
+/* The quickadd text above sizing */
+.quick-add-text {
+  display: grid;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+/* Show the quick-add div when the parent item is hovered */
+.item:hover .quick-add {
+  display: block;
+}
+
+.item-name {
+  font-size: 18px; 
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.item-fit {
+  color: #909090;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+/* For products that are on discount */
+.discounted-item-price {
+  font-weight: bold;
+}
+
+/* Discounted price is displayed in red color to attract attention */
+.discount {
+  color: red;
+}
+
+.item-name,
+.item-fit,
+.item-price,
+.discounted-item-price {
+  margin: 10px 0;
+}
+
+/* Responsive Grid for Items */
+.item-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  justify-content: center;
+}
+
+/* Star rating CSS */
+.rating {
+  display: flex;
+  direction: ltr;
+  cursor: pointer;
+}
+
+.star {
+  width: 2rem;
+}
+
+/* Confirmation message once user leaves a review */
+.submitReview {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+.callUs {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+}
+
+#phoneNum {
+  color: blue;
+}
+#phoneNum:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.messageUs {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+}
+
+.popupContent {
+  position: relative;
+  width: 500px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.closeConfirmation {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.checkIcon {
+  display: block;
+  margin: 0 auto;
+  width: 50px;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contact-section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  margin-top: 80px;
+  text-align: center;
+  cursor: pointer;
+  width: 1000px;
+  margin-left: 250px;
+}
+
+.contact-card:hover {
+  background-color: #000000;
+  color: white;
+}
+
+.contact-card {
+  flex: 1;
+  margin-right: 20px;
+  padding: 30px;
+  box-shadow: 8px 8px 8px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.contact-card:last-child {
+  margin-right: 0;
+}
+
+.contact-icon {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.contact-title {
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+.opening-hours {
+  border: 1px solid black;
+  margin-top: 20px;
+  padding-top: 5px;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-description {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.error {
+  color: red;
+  padding: 0;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+.contact-form-container {
+  width: 80%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input[id="subject"], input[id="fullName"], input[id="email"], textarea[id="message"], #submit {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#submit {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#submit:hover {
+  background-color: #0056b3;
+}
+
+/* RAPINDER'S CSS */
+.cart {
+  position: relative;
+  display: inline-block;
+}
+#cart-size {
+  /* background-color: black;
+  color:rgb(255, 255, 255);
+  text-align: center;
+  border-radius: 50%; */
+    position: absolute;
+    bottom: -5px;
+    right: 41px;
+    background-color: black;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    z-index: 1;
+}
+
+.cartdisplay {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding: 5px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-between;
+
+}
+
+#cartItems {
+gap: 30px;
+}
+
+#cartIcon.changed {
+  background-color: red;
+}
+
+.checkout button { 
+  padding: 20px 120px;
+  color:white;
+  font-size: x-large;
+  background-color: royalblue;
+  border-radius: 10px;
+  margin-left: 40%;
+}
+
+#heart {
+  color: grey;  
+  font-size: 50px;
+}
+ 
+#heart.red {
+  color: red;
+}
+ 
+.images {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+ 
+.sideImages {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 0px;
+  height:0px;
+  max-width: 25%;
+  max-height: 25%;
+  gap: 5px;
+}
+ 
+.sideImages img {
+  max-width: 100%;
+}
+ 
+.sizeButtons {
+  padding-bottom: 50px;
+  display: inline-block;
+  }
+ 
+.sizeButtons button {
+color:black;
+background-color: white;
+font-weight: bold;
+font-size: larger;
+padding: 15px 25px;
+border-radius: 10px;
+}
+ 
+.sizeButtons button:hover {
+background-color: black;
+color:white;
+}
+ 
+  
+.sizeButtons button.selected {
+  background-color: black;
+  color: white;
+}
+ 
+.addToBag {
+  padding-left: 100px;
+  display: inline-block;
+}
+.addToBag button {
+  padding: 20px 120px;
+  color:white;
+  font-size: x-large;
+  background-color: royalblue;
+  border-radius: 10px;
+}
+ 
+.reccomendations {
+  grid-template-columns: auto auto auto;
+  grid-template-areas:
+  image image image
+  subtext subtext subtext
+  subtext subtext subtext
+  ;
+  grid-template-rows: auto 10px 10px 10px;
+  row-gap: 10px;
+  display: grid;
+  justify-content: stretch;
+  align-items: stretch;
+  font-size: xx-small;
+  padding-bottom: 40px;
+}
+ 
+.reccomendations .doom {
+  justify-content: center;
+}
+ 
+.reccomendations h2 {
+  color:gray;
+}
+ 
+.reccomendations h3 {
+  font-size: medium;
+}
+ 
+.reccomendations image {
+  max-width: 100%;
+}
+ 
+ 
+ 
+footer {
+  background-color: #1a1a1a;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+ 
+.lowerArea {
+  display: flex;
+  justify-content: space-between;
+  max-height: 325px;
+  margin: 0 auto;
+  max-width: 100%;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+ 
+.lowerArea > img {
+  display: inline-block;
+  padding-left: 1%;
+  padding-right: 1%;
+  margin-bottom: 10px;
+  padding-bottom: 1%;
+}
+ 
+.lowerArea .social img {
+  margin: 10px;
+}
+ 
+.lowerArea .links {
+  font-size:x-large;
+  width: 33%;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px 30px;
+  margin-right: 30px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+ 
+.lowerArea .links a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 0;
+}
+
+
+
+
+/* Aryan's CSS */
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+/* Update background and text colors */
+
+/* body {
+  background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+  color: #333;
+} */
+
+#order-form {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+
+
+.section-separator {
+  border-top: 1px solid #ccc;
+  margin: 20px 0;
+}
+
+/* Adding styles for the left and right columns */
+.left, .otherside {
+  flex: 1;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-right: 20px;
+}
+
+.section-separator {
+  border-top: 1px solid #ccc; 
+  margin: 20px 0; 
+}
+
+/* Style for columns */
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* Additional style for smaller labels on smaller screens */
+/* Style for the order summary section */
+.order-summary {
+  margin-top: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+
+#logo {
+  font-size: 36px;
+  font-weight: bold;
+  margin-right: auto;
+}
+
+/* Style for the product section */
+.product {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.product img {
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+}
+
+.product-details {
+  flex: 1;
+}
+
+/* Style for the order summary section */
+.order-summary {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+/* Style for the continue button */
+.left label, .otherside label {
+  font-weight: bold;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Style for the input fields in the contact details section */
+.left input[type="text"],
+.left select,
+.otherside input[type="text"],
+.otherside select {
+  width: 50%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Style for the required label */
+/* Style for required label */
+.required-label::after {
+  content: " *";
+  color: #ff0000;
+}
+
+
+/* Style for the "Continue Order" button */
+#continue-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#continue-button:hover {
+  background-color: #0056b3;
+}
+
+/* Style for the modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Style for the modal content */
+/* Style for the credit card section */
+.right {
+  flex: 1;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.right h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.right hr {
+  border: none;
+  border-top: 2px solid #007bff; /* Blue color */
+  margin: 20px 0;
+}
+
+/* Style for card logos */
+.card-logos {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.card-logos img {
+  width: 40px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+/* Style for input fields */
+.right input[type="text"],
+.right select {
+  width: 50%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Style for labels */
+.right label {
+  font-weight: bold;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Style for the "Confirm Order" button */
+#confirm-order-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#confirm-order-button:hover {
+  background-color: #02458d;
+}
+
+/* Style for the modal */
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Style for the close button of the modal */
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #888;
+}
+
+/* Style for the modal message */
+#order-reference-number {
+  font-size: 18px;
+  font-weight: bold;
+  color: #007bff;
+}
+
+/* Style for input fields and labels */
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  width: 50%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="tel"]:hover,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus {
+  border-color: #007bff;
+}
+
+label {
+  font-weight: bold;
+  font-size: 18px;
+  color: #007bff;
+}
+
+/* Style for labels */
+.column label {
+  margin-bottom: 10px;
+  font-weight: bold;
+  display: block;
+}
+.column input[type="text"],
+.column select {
+  margin-top: 5px;
+  width: 50%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+#nameoncard,
+#cardnumber,
+#securitycode {
+  width: 49%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Style for the total section */
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+#okay-button {
+  background-color: #0074d9;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Style the "Okay" button on hover */
+#okay-button:hover {
+  background-color: #0056b3;
+}
+/* Consent Banner Styles */
+.consent-banner {
+  display: block;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #333; /* Background color */
+  color: #fff; /* Text color */
+  padding: 10px;
+  text-align: center;
+  z-index: 9999; /* Ensures it's on top of other content */
+}
+
+.consent-banner a {
+  color: #ff9900; /* Link color */
+  text-decoration: underline;
+}
+
+.consent-banner button {
+  background-color: #ff9900; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.consent-banner button:hover {
+  background-color: #ff6600; /* Hover color for the button */
+}
+/* styles.css for hyperactive sports*/
+
+.no-decoration {
+  text-decoration: none;
+  color: inherit; 
+  cursor: pointer; 
+  font-size: 18px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.no-decoration:hover {
+  text-decoration: none; /* Remove underline on hover as well */
+}
+/*Registration form*/
+
+.tabbed-form {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+/* Style for the tab headers */
+.tab-header {
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+}
+
+.tab-header button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.tab-header button.active {
+  background-color: #666;
+}
+
+/* Style for the tab content */
+.tab-content {
+  display: none;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Style for forms and form elements within the content */
+.tab-content form {
+  text-align: left;
+}
+
+.tab-content h1 {
+  font-size: 24px;
+}
+
+.tab-content label, .tab-content input {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.tab-content button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Add some margin and spacing to make it look nice */
+.tabbed-form {
+  margin-top: 20px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .tab-header button {
+      padding: 8px 16px;
+  }
+
+  .tab-content {
+      padding: 10px;
+  }
+}
+/* Registration css */
+#registration-form {
+  background-color: #f4f4f4;
+  padding: 40px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+#registration-form h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#registration-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+#registration-form input {
+  width: 50%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+#registration-form button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+#registration-form button:hover {
+  background-color: #555;
+}
+/* Login css */
+#login-form {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+#login-form h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.login-container .form-group {
+  margin-bottom: 15px;
+}
+
+.login-container label {
+  display: block;
+  font-weight: bold;
+}
+
+.login-container input {
+  width: 50%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+.login-button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.login-button:hover {
+  background-color: #555;
+}
+
+/* styles.css for social links*/
+
+.social a {
+  text-decoration: none;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}

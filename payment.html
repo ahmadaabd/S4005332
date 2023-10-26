@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fitness Freaks</title>
+    <!-- <link rel="stylesheet" type="text/css" href="paymentStyle.css"> -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="customization">
+        <select id="currencyDropdown">
+            <option value="AUD">AUD</option>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+        </select>
+        <button id="contactUs" onclick="location.href='contactUs.html'">Contact us </button>
+    </div>
+    
+    <div class="grid-container">
+        <!-- 1. Logo -->
+        <a href="index.html" class="logo">
+            <img src="/images/FitnessFreaks.png" alt="Website Logo" width="200px" height="100px">
+        </a>
+        
+        <!-- 2. Search Box -->
+        <div class="search">
+            <input type="text" placeholder="Search products...">
+            <button type="submit">Search</button>
+        </div>
+        
+        <div class="grid2">n
+            <!-- 3. Cart Button -->
+            <div class="cart">
+                <span id="cart-size"> 0 </span>
+                <a id="cartIcon" href="cart.html" class="cart">
+                <img src="images/Cart logo.png" alt="Cart" width="20px"></a>
+            </div>
+
+            <!-- 4. Account Options -->
+            <div class="account">
+                <img src="/images/User image.png" alt="Account" width="25px">
+                <div class="account-dropdown">
+                    <a href="#">My account</a>
+                    <a href="wishlist.html">Wishlist</a>
+                    <a href="#">My Orders</a>
+                    <a href="registration.html">Login/Register</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="nav-menu">
+        <button class="nav-button" onclick="location.href='#mens'">Mens</button>
+        <button class="nav-button" onclick="location.href='#womens'">Womens</button>
+        <button class="nav-button" onclick="location.href='#accessories'">Accessories</button>
+        <button class="nav-button" style="color: red;" onclick="location.href='#sale'"><b>Sale</b></button>
+    </div>
+
+    <!-- Form -->
+    <form>
+        
+        <div class="right">
+            <h2>Credit/Debit Card</h2>
+            <hr>
+            <div>
+                <!-- Add small logos of debit card companies here -->
+            </div>
+            <div>
+                <label for="cardnumber">Card Number*</label>
+            </div>
+            <div>
+                <input type="text" id="cardnumber" name="cardnumber" placeholder="Your Card Number" required maxlength="12">
+            </div>
+            <div>
+                <label for="nameoncard">Name on Card*</label>
+            </div>
+            <div>
+                <input type="text" id="nameoncard" name="nameoncard" placeholder="Name on Card">
+            </div>
+            <div>
+               
+                <label for="expiry">Expiry Date*</label>
+            </div>
+        
+            <div>
+                <select id="expiry" name="expiry">
+                    <option value="" disabled selected>Select Month</option>
+                    <option value="01">January</option>
+                    <option value="02">February</option>
+                    <option value="03">March</option>
+                    <option value="04">April</option>
+                    <option value="05">May</option>
+                    <option value="06">June</option>
+                    <option value="07">July</option>
+                    <option value="08">August</option>
+                    <option value="09">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select>
+                <select id="expiry-year" name="expiry-year">
+                    <option value="" disabled selected>Select Year</option>
+    <!-- Add options for years from 2023 to 2040 -->
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+                <option value="2027">2027</option>
+                <option value="2028">2028</option>
+                <option value="2029">2029</option>
+                <option value="2030">2030</option>
+                <option value="2031">2031</option>
+                <option value="2032">2032</option>
+                <option value="2033">2033</option>
+                <option value="2034">2034</option>
+                <option value="2035">2035</option>
+                <option value="2036">2036</option>
+                <option value="2037">2037</option>
+                <option value="2038">2038</option>
+                <option value="2039">2039</option>
+                <option value="2040">2040</option>
+                </select>
+                
+            </div>
+            <div>
+                <label for="securitycode">Security Code*</label>
+                </div>
+                <div>
+                    <input type="text" id="securitycode" name="securitycode" placeholder="Your Security Code" required maxlength="3">
+            </div>
+        </div>
+    </div>
+ <!-- Order Summary Section -->
+ <h1>Your Cart</h1>
+ <div id="cartItems"></div>
+
+ <script>
+     document.addEventListener('DOMContentLoaded', () => {
+         
+         const storedCart = JSON.parse(localStorage.getItem('cart'));
+         
+         const cartItemsID = document.getElementById('cartItems');
+         const totalID = document.getElementById('totalID'); 
+
+         if (storedCart) {
+             storedCart.forEach(item => {
+                 const cartItem = document.createElement('div');
+                 cartItem.innerHTML = `
+                     <div class="cartdisplay">
+                         <img src="${item.image}" width="100" height="100"> <p>Product: ${item.product}</p> <p>Size: ${item.size}</p>  <p>Price: ${item.price}</p>
+                     </div>`;
+
+                 cartItemsID.appendChild(cartItem);
+             });
+         }
+     });
+ </script>
+
+
+
+<button type="button" id="confirm-order-button">Confirm Order</button>
+
+<!-- Modal for Order Confirmation -->
+<div id="order-confirmation-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Your order has been placed.</p>
+        <p>Order Reference Number: <span id="order-reference-number"></span></p>
+        <button id="okay-button">Okay</button>
+    </div>
+</div>
+
+
+<script>
+    // Get references to the button, modal, and order reference number span
+    const confirmOrderButton = document.getElementById("confirm-order-button");
+    const modal = document.getElementById("order-confirmation-modal");
+    const closeBtn = document.querySelector(".close");
+    const orderReferenceNumberSpan = document.getElementById("order-reference-number");
+    const cardNumberInput = document.getElementById("cardnumber");
+    const securityCodeInput = document.getElementById("securitycode");
+    const nameOnCardInput = document.getElementById("nameoncard");
+    const expiryMonthSelect = document.getElementById("expiry");
+    const expiryYearSelect = document.getElementById("expiry-year");
+    
+
+    // Function to generate a random reference number
+    function generateReferenceNumber() {
+        const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+        let referenceNumber = "A";
+
+        for (let i = 0; i < 4; i++) {
+            const randomIndex = Math.floor(Math.random() * characters.length);
+            referenceNumber += characters[randomIndex];
+        }
+
+        return referenceNumber + "T";
+    }
+
+    // Function to show the modal with the reference number
+    function showModal() {
+        // Check if all fields are filled and card number and security code have the required lengths
+        if (
+            cardNumberInput.value.length === 12 &&
+            securityCodeInput.value.length === 3 &&
+            nameOnCardInput.value.trim() !== "" &&
+            expiryMonthSelect.value !== "" &&
+            expiryYearSelect.value !== ""
+        ) {
+            const referenceNumber = generateReferenceNumber();
+            orderReferenceNumberSpan.textContent = referenceNumber;
+            modal.style.display = "block";
+        } else {
+            alert("Please fill out all required fields correctly.");
+        }
+    }
+
+    // Function to hide the modal
+    function hideModal() {
+        modal.style.display = "none";
+    }
+
+    // Event listener for the "Confirm Order" button
+    confirmOrderButton.addEventListener("click", showModal);
+
+    // Event listener for the close button in the modal
+    closeBtn.addEventListener("click", hideModal);
+    
+    
+
+    // Close the modal if the user clicks outside of it
+    window.addEventListener("click", function(event) {
+        if (event.target === modal) {
+            hideModal();
+        }
+    });
+    
+</script>
+
+
+    
+
+    <!-- Footer -->
+    <footer>
+        <div class="lowerArea">
+            <img src="images/FitnessFreaks.png" width="25%" height="50%" style="float: left;">
+            <div class="social">
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="images/inst.png" width="75px" height="75px" alt="Instagram">
+                </a>
+                <a href="https://twitter.com" target="_blank">
+                    <img src="images/twt.png" width="75px" height="75px" alt="Twitter">
+                </a>
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="images/face.png" width="75px" height="75px" alt="Facebook">
+                </a>
+                <a href="https://plus.google.com" target="_blank">
+                    <img src="images/goog.png" width="75px" height="75px" alt="Google+">
+                </a>
+            </div>
+            <div class="links">
+                <a href="google.com"> Contact </a>
+                <a href="About-us.html"> About us </a>
+                <a href="Terms_and_conditions.html"> Terms & Conditions </a>
+                <a href="google.com"> Careers </a>
+                <a href="google.com"> Change Country </a>
+                <a style="padding-bottom:5%;" href="google.com"> FAQ </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

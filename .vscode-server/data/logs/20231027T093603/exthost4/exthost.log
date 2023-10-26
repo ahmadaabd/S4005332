@@ -1,0 +1,66 @@
+2023-10-27 09:47:18.298 [info] Extension host with pid 4278 started
+2023-10-27 09:47:18.298 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2023-10-27 09:47:18.298 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2023-10-27 09:47:20.887 [info] Lock '/home/sl2/S4005332/.vscode-server/data/User/workspaceStorage/29214664e9b0c11b903eb840ff801c8a/vscode.lock': Lock acquired.
+2023-10-27 09:47:21.095 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2023-10-27 09:47:21.096 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2023-10-27 09:47:23.809 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2023-10-27 09:47:23.810 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2023-10-27 09:47:23.810 [info] Eager extensions activated
+2023-10-27 09:48:05.399 [info] ExtensionService#_doActivateExtension vscode.html-language-features, startup: false, activationEvent: 'onLanguage:html'
+2023-10-27 09:52:11.961 [warning] [Decorations] CAPPING events from decorations provider vscode.git 1853
+2023-10-27 09:52:12.552 [warning] [Decorations] CAPPING events from decorations provider vscode.git 1853
+2023-10-27 09:52:13.146 [error] {"message":"Git error","stdout":"","stderr":"fatal: '/home/sl2/S4005332/HDrive' is outside repository\n","exitCode":128}
+2023-10-27 09:52:13.146 [error] {"message":"Git error","stdout":"","stderr":"fatal: '/home/sl2/S4005332/HDrive' is outside repository\n","exitCode":128}
+2023-10-27 09:52:13.146 [error] {"message":"Git error","stdout":"","stderr":"fatal: '/home/sl2/S4005332/HDrive' is outside repository\n","exitCode":128}
+2023-10-27 09:52:13.146 [error] {"message":"Git error","stdout":"","stderr":"fatal: '/home/sl2/S4005332/HDrive' is outside repository\n","exitCode":128}
+2023-10-27 09:52:13.146 [error] {"message":"Git error","stdout":"","stderr":"fatal: '/home/sl2/S4005332/HDrive' is outside repository\n","exitCode":128}
+2023-10-27 09:52:13.146 [error] {"message":"Git error","stdout":"","stderr":"fatal: '/home/sl2/S4005332/HDrive' is outside repository\n","exitCode":128}
+2023-10-27 09:52:13.146 [error] {"message":"Git error","stdout":"","stderr":"fatal: '/home/sl2/S4005332/HDrive' is outside repository\n","exitCode":128}
+2023-10-27 09:52:13.146 [error] {"message":"Git error","stdout":"","stderr":"fatal: '/home/sl2/S4005332/HDrive' is outside repository\n","exitCode":128}
+2023-10-27 09:52:13.146 [error] {"message":"Git error","stdout":"","stderr":"fatal: '/home/sl2/S4005332/HDrive' is outside repository\n","exitCode":128}
+2023-10-27 09:52:13.146 [error] {"message":"Git error","stdout":"","stderr":"fatal: '/home/sl2/S4005332/HDrive' is outside repository\n","exitCode":128}
+2023-10-27 09:52:13.146 [error] {"message":"Git error","stdout":"","stderr":"fatal: '/home/sl2/S4005332/HDrive' is outside repository\n","exitCode":128}
+2023-10-27 09:52:13.146 [error] {"message":"Git error","stdout":"","stderr":"fatal: '/home/sl2/S4005332/HDrive' is outside repository\n","exitCode":128}
+2023-10-27 09:52:13.146 [error] {"message":"Git error","stdout":"","stderr":"fatal: '/home/sl2/S4005332/HDrive' is outside repository\n","exitCode":128}
+2023-10-27 09:52:13.146 [error] {"message":"Git error","stdout":"","stderr":"fatal: '/home/sl2/S4005332/HDrive' is outside repository\n","exitCode":128}
+2023-10-27 09:52:13.147 [error] {"message":"Git error","stdout":"","stderr":"fatal: '/home/sl2/S4005332/HDrive' is outside repository\n","exitCode":128}
+2023-10-27 09:52:13.147 [error] {"message":"Git error","stdout":"","stderr":"fatal: '/home/sl2/S4005332/HDrive' is outside repository\n","exitCode":128}
+2023-10-27 09:52:13.147 [error] {"message":"Git error","stdout":"","stderr":"fatal: '/home/sl2/S4005332/HDrive' is outside repository\n","exitCode":128}
+2023-10-27 09:52:13.147 [error] {"message":"Git error","stdout":"","stderr":"fatal: '/home/sl2/S4005332/HDrive' is outside repository\n","exitCode":128}
+2023-10-27 09:52:13.147 [error] {"message":"Git error","stdout":"","stderr":"fatal: '/home/sl2/S4005332/HDrive' is outside repository\n","exitCode":128}
+2023-10-27 09:52:13.147 [error] {"message":"Git error","stdout":"","stderr":"fatal: '/home/sl2/S4005332/HDrive' is outside repository\n","exitCode":128}
+2023-10-27 09:52:13.147 [error] {"message":"Git error","stdout":"","stderr":"fatal: '/home/sl2/S4005332/HDrive' is outside repository\n","exitCode":128}
+2023-10-27 09:52:13.147 [error] {"message":"Git error","stdout":"","stderr":"fatal: '/home/sl2/S4005332/HDrive' is outside repository\n","exitCode":128}
+2023-10-27 09:52:13.147 [error] {"message":"Git error","stdout":"","stderr":"fatal: '/home/sl2/S4005332/HDrive' is outside repository\n","exitCode":128}
+2023-10-27 09:52:13.147 [error] {"message":"Git error","stdout":"","stderr":"fatal: '/home/sl2/S4005332/HDrive' is outside repository\n","exitCode":128}
+2023-10-27 09:52:13.147 [error] {"message":"Git error","stdout":"","stderr":"fatal: '/home/sl2/S4005332/HDrive' is outside repository\n","exitCode":128}
+2023-10-27 09:52:13.147 [error] {"message":"Git error","stdout":"","stderr":"fatal: '/home/sl2/S4005332/HDrive' is outside repository\n","exitCode":128}
+2023-10-27 09:52:13.147 [error] {"message":"Git error","stdout":"","stderr":"fatal: '/home/sl2/S4005332/HDrive' is outside repository\n","exitCode":128}
+2023-10-27 09:52:14.149 [error] {"message":"Git error","stdout":"","stderr":"fatal: '/home/sl2/S4005332/HDrive' is outside repository\n","exitCode":128}
+2023-10-27 09:52:14.149 [error] {"message":"Git error","stdout":"","stderr":"fatal: '/home/sl2/S4005332/HDrive' is outside repository\n","exitCode":128}
+2023-10-27 09:52:14.149 [error] {"message":"Git error","stdout":"","stderr":"fatal: '/home/sl2/S4005332/HDrive' is outside repository\n","exitCode":128}
+2023-10-27 09:52:14.150 [error] {"message":"Git error","stdout":"","stderr":"fatal: '/home/sl2/S4005332/HDrive' is outside repository\n","exitCode":128}
+2023-10-27 09:52:14.151 [error] {"message":"Git error","stdout":"","stderr":"fatal: '/home/sl2/S4005332/HDrive' is outside repository\n","exitCode":128}
+2023-10-27 09:52:14.152 [error] {"message":"Git error","stdout":"","stderr":"fatal: '/home/sl2/S4005332/HDrive' is outside repository\n","exitCode":128}
+2023-10-27 09:52:14.153 [error] {"message":"Git error","stdout":"","stderr":"fatal: '/home/sl2/S4005332/HDrive' is outside repository\n","exitCode":128}
+2023-10-27 09:52:14.153 [error] {"message":"Git error","stdout":"","stderr":"fatal: '/home/sl2/S4005332/HDrive' is outside repository\n","exitCode":128}
+2023-10-27 09:52:14.154 [error] {"message":"Git error","stdout":"","stderr":"fatal: '/home/sl2/S4005332/HDrive' is outside repository\n","exitCode":128}
+2023-10-27 09:52:14.154 [error] {"message":"Git error","stdout":"","stderr":"fatal: '/home/sl2/S4005332/HDrive' is outside repository\n","exitCode":128}
+2023-10-27 09:52:14.155 [error] {"message":"Git error","stdout":"","stderr":"fatal: '/home/sl2/S4005332/HDrive' is outside repository\n","exitCode":128}
+2023-10-27 09:52:14.156 [error] {"message":"Git error","stdout":"","stderr":"fatal: '/home/sl2/S4005332/HDrive' is outside repository\n","exitCode":128}
+2023-10-27 09:52:14.157 [error] {"message":"Git error","stdout":"","stderr":"fatal: '/home/sl2/S4005332/HDrive' is outside repository\n","exitCode":128}
+2023-10-27 09:52:14.158 [error] {"message":"Git error","stdout":"","stderr":"fatal: '/home/sl2/S4005332/HDrive' is outside repository\n","exitCode":128}
+2023-10-27 09:52:14.159 [error] {"message":"Git error","stdout":"","stderr":"fatal: '/home/sl2/S4005332/HDrive' is outside repository\n","exitCode":128}
+2023-10-27 09:52:14.159 [error] {"message":"Git error","stdout":"","stderr":"fatal: '/home/sl2/S4005332/HDrive' is outside repository\n","exitCode":128}
+2023-10-27 09:52:14.160 [error] {"message":"Git error","stdout":"","stderr":"fatal: '/home/sl2/S4005332/HDrive' is outside repository\n","exitCode":128}
+2023-10-27 09:52:14.160 [error] {"message":"Git error","stdout":"","stderr":"fatal: '/home/sl2/S4005332/HDrive' is outside repository\n","exitCode":128}
+2023-10-27 09:52:14.161 [error] {"message":"Git error","stdout":"","stderr":"fatal: '/home/sl2/S4005332/HDrive' is outside repository\n","exitCode":128}
+2023-10-27 09:52:14.161 [error] {"message":"Git error","stdout":"","stderr":"fatal: '/home/sl2/S4005332/HDrive' is outside repository\n","exitCode":128}
+2023-10-27 09:52:14.162 [error] {"message":"Git error","stdout":"","stderr":"fatal: '/home/sl2/S4005332/HDrive' is outside repository\n","exitCode":128}
+2023-10-27 09:52:14.162 [error] {"message":"Git error","stdout":"","stderr":"fatal: '/home/sl2/S4005332/HDrive' is outside repository\n","exitCode":128}
+2023-10-27 09:52:14.163 [error] {"message":"Git error","stdout":"","stderr":"fatal: '/home/sl2/S4005332/HDrive' is outside repository\n","exitCode":128}
+2023-10-27 09:52:14.163 [error] {"message":"Git error","stdout":"","stderr":"fatal: '/home/sl2/S4005332/HDrive' is outside repository\n","exitCode":128}
+2023-10-27 09:52:14.163 [error] {"message":"Git error","stdout":"","stderr":"fatal: '/home/sl2/S4005332/HDrive' is outside repository\n","exitCode":128}
+2023-10-27 09:52:14.163 [error] {"message":"Git error","stdout":"","stderr":"fatal: '/home/sl2/S4005332/HDrive' is outside repository\n","exitCode":128}
+2023-10-27 09:52:14.164 [error] {"message":"Git error","stdout":"","stderr":"fatal: '/home/sl2/S4005332/HDrive' is outside repository\n","exitCode":128}

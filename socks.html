@@ -1,0 +1,193 @@
+
+<script src="https://kit.fontawesome.com/bb6f86e3e6.js" crossorigin="anonymous"></script>
+
+
+<!DOCTYPE html>
+<html lang="en">
+ <link href="styles.css" rel="stylesheet" type="text/css" media="all"> 
+<title>
+
+</title>
+<body>
+    <div class="customization">
+        <select id="currencyDropdown">
+            <option value="AUD">AUD</option>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+        </select>
+        <button id="contactUs" onclick="location.href='contactUs.html'">Contact us </button>
+    </div>
+    
+    <div class="grid-container">
+        <!-- 1. Logo -->
+        <a href="index.html" class="logo">
+            <img src="images/FitnessFreaks.png" alt="Website Logo" width="200px" height="100px">
+        </a>
+        
+        <!-- 2. Search Box -->
+        <div class="search">
+            <input type="text" placeholder="Search products...">
+            <button type="submit">Search</button>
+        </div>
+        
+        
+        <div class="grid2">
+            <!-- 3. Cart Button -->
+            <div class="cart">
+                <span id="cart-size"> 0 </span>
+                <a id="cartIcon" href="cart.html" class="cart">
+                <img src="images/Cart logo.png" alt="Cart" width="20px"></a>
+            </div>
+        
+
+            <!-- 4. Account Options -->
+            <div class="account">
+                <img src="images/User image.png" alt="Account" width="25px">
+                <div class="account-dropdown">
+                    <a href="#">My account</a>
+                    <a href="wishlist.html">Wishlist</a>
+                    <a href="#">My Orders</a>
+                    <a href="registration.html">Login/Register</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nav-menu">
+        <button class="nav-button" onclick="location.href='#mens'">Mens</button>
+        <button class="nav-button" onclick="location.href='#womens'">Womens</button>
+        <button class="nav-button" onclick="location.href='#accessories'">Accessories</button>
+        <button class="nav-button" onclick="location.href='#sale'">Sale</button>
+    </div>
+
+    <div class="images">
+        <img style="flex: 1; width: 0px; max-width: 50%;" id="image" src="images/socks.png">
+        </div>
+        </div>
+        <div style="padding-left: 10%; padding-right: 10%;">
+        <h1> <span id="prod" value="Active socks 3PK">Active Socks 3PK</span> - White &#9733 &#9733 &#9733 &#9733 &#9733
+        </h1>q
+        <h1 style="margin-top: -30px; color:gray"> <span id="price" value="$45" style="color:black"> $45 </span></h1> 
+        <h1> SELECT SIZE</h1>
+        <div class="sizeButtons">
+                <button class="size" value="XS">XS</button>
+                <button class="size" value="S">S</button>
+                <button class="size" value="M">M</button>
+                <button class="size" value="L"> L </button>
+                <button class="size" value="XL">XL</button>
+                <button class="size" value="XXL">XXL</button>
+            
+        </div>
+
+        <span class="addToBag"> <button id="addToBag">ADD TO BAG</button> </span>
+
+    <script>
+
+        let selectedSize = null; 
+        const sizeButtons = document.querySelectorAll('.size');
+
+        const addToBagButton = document.getElementById('addToBag');
+
+
+        sizeButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                sizeButtons.forEach((btn) => btn.classList.remove('selected'));
+
+                const size = button.value;
+                selectedSize = size;
+                button.classList.add('selected');
+
+                addToBagButton.disabled = false;
+            });
+        });
+
+        addToBagButton.addEventListener('click', () => {
+            if (selectedSize) {
+                addToCart(product, selectedSize, price, imageSrc);
+
+                selectedSize = null;
+                sizeButtons.forEach((btn) => btn.classList.remove('selected'));
+                addToBagButton.disabled = true;
+            }
+        });
+
+        const cart = [];
+
+        const priceElement = document.getElementById('price');
+        const price = priceElement.textContent;
+
+        const productElement = document.getElementById('prod');
+        const product = productElement.textContent;
+
+        const imageElement = document.getElementById('image');
+        const imageSrc = imageElement.src;
+
+        function addToCart(product, size, price, image) {
+            cart.push({ product, size, price, image });
+
+            localStorage.setItem('cart', JSON.stringify(cart));
+            
+
+            updateCartUI()  
+            alert(`Product ${product} with size ${size} added to the cart for ${price}`);
+        
+
+            function updateCartUI() {
+            const cartSize = cart.length;
+            document.getElementById('cart-size').textContent = cartSize;
+        }
+
+        const cartsize = document.getElementById('cart-size');
+        cartsize.addEventListener('click', updateCartUI);
+        cartsize.classList.add('red');
+    }
+    </script>
+        
+        <h1> Description</h1>
+        <p style="color:gray;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam blandit erat quis blandit tristique. Morbi sit amet dolor vitae magna cursus viverra vitae in magna. Duis aliquet imperdiet tincidunt. Nam laoreet vulputate condimentum. Nullam rhoncus tincidunt elit, nec vulputate ipsum tincidunt quis. Pellentesque cursus placerat nisl vitae feugiat. Duis pretium lorem in eros cursus, at fringilla erat egestas. Phasellus sed eros massa. Donec nec ex varius nibh tristique tristique. Cras enim eros, volutpat nec enim et, mattis sagittis mi. Morbi erat quam, dictum quis dapibus et, pellentesque at augue. Aenean ut fermentum lacus. Aliquam sit amet iaculis neque. In pellentesque ultricies dui, sed aliquet enim tristique sit amet. Nullam blandit pellentesque nunc, sit amet aliquam metus ullamcorper et. Pellentesque sodales, ante sit amet faucibus suscipit, elit velit lobortis nibh, a blandit sapien neque ac purus. </p>
+        <h1>You might also like </h1>
+        <div class="reccomendations">
+        <img style="width: 80%" src="images/sportsBraPink.png"> 
+        <img style="width: 80%" src="images/LongSleeveCrop.png"> 
+        <img style="width: 80%" src="images/sportsbra.png"> 
+        <a style=" color:black; text-decoration: none;" href="SportsBraPink.html"><h1> Hyperactive Sports Bra - Pink </h1></a>
+        <a style=" color:black; text-decoration: none;" href="LongSleeveCropTop.html"><h1> Long Sleeve Crop - Blue </h1></a>
+        <a style=" color:black; text-decoration: none;" href="SportsBraWhite.html"><h1> Hyperactive Sports Bra - White </h1></a>
+        <h2> Light support </h2>
+        <h2> Light support </h2>
+        <h2> Light Support </h2>
+        <h3> $60 </h3>
+        <h3> $60 </h3>
+        <h3> $60 </h3>
+        </div>
+    </div>
+</body>
+
+
+<footer>
+    <div class="lowerArea">
+        <img src="images/FitnessFreaks.png" width="25%" height="50%" style="float: left;">
+        <div class="social">
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="images/inst.png" width="75px" height="75px" alt="Instagram">
+            </a>
+            <a href="https://twitter.com" target="_blank">
+                <img src="images/twt.png" width="75px" height="75px" alt="Twitter">
+            </a>
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="images/face.png" width="75px" height="75px" alt="Facebook">
+            </a>
+            <a href="https://plus.google.com" target="_blank">
+                <img src="images/goog.png" width="75px" height="75px" alt="Google+">
+            </a>
+        </div>
+        <div class="links">
+            <a href="google.com"> Contact </a>
+            <a href="About-us.html"> About us </a>
+            <a href="Terms_and_conditions.html"> Terms & Conditions </a>
+            <a href="google.com"> Careers </a>
+            <a href="google.com"> Change Country </a>
+            <a style="padding-bottom:5%;" href="google.com"> FAQ </a>
+        </div>
+    </div>
+</footer>
+    </html>

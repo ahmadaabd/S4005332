@@ -1,0 +1,51 @@
+2023-10-27 09:47:25.799 [info] Log level: Info
+2023-10-27 09:47:25.799 [info] Validating found git in: "git"
+2023-10-27 09:47:25.799 [info] Using git "1.8.3.1" from "git"
+2023-10-27 09:47:25.799 [info] > git rev-parse --show-toplevel [1233ms]
+2023-10-27 09:47:25.800 [info] fatal: Not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2023-10-27 09:47:25.801 [info] > git rev-parse --show-toplevel [753ms]
+2023-10-27 09:47:25.801 [info] fatal: Not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2023-10-27 09:47:26.306 [info] > git rev-parse --show-toplevel [501ms]
+2023-10-27 09:47:26.306 [info] fatal: Not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2023-10-27 09:47:26.740 [info] > git rev-parse --show-toplevel [429ms]
+2023-10-27 09:47:26.740 [info] fatal: Not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2023-10-27 09:48:08.308 [info] > git rev-parse --show-toplevel [2526ms]
+2023-10-27 09:48:08.403 [info] fatal: Not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2023-10-27 09:48:49.655 [info] > git rev-parse --show-toplevel [1063ms]
+2023-10-27 09:48:49.806 [info] fatal: Not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2023-10-27 09:50:58.474 [info] > git init [26469ms]
+2023-10-27 09:52:10.073 [info] > git rev-parse --show-toplevel [1655ms]
+2023-10-27 09:52:10.779 [info] > git rev-parse --git-dir --git-common-dir [546ms]
+2023-10-27 09:52:10.794 [info] Open repository: /home/sl2/S4005332
+2023-10-27 09:52:10.801 [warning] getRemotes() - ENOENT: no such file or directory, open '/home/sl2/S4005332/--git-common-dir/config'
+2023-10-27 09:52:10.802 [info] > git init [10254ms]
+2023-10-27 09:52:10.820 [info] > git remote --verbose [19ms]
+2023-10-27 09:52:10.821 [info] > git config --get commit.template [1ms]
+2023-10-27 09:52:10.835 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname) refs/heads/master refs/remotes/master [6ms]
+2023-10-27 09:52:10.855 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [4ms]
+2023-10-27 09:52:11.187 [info] > git show --textconv :About-us.html [19ms]
+2023-10-27 09:52:11.187 [info] > git show --textconv :wishlist.html [14ms]
+2023-10-27 09:52:11.187 [info] > git ls-files --stage -- /home/sl2/S4005332/wishlist.html [2ms]
+2023-10-27 09:52:11.189 [info] > git ls-files --stage -- /home/sl2/S4005332/About-us.html [10ms]
+2023-10-27 09:52:11.433 [info] > git check-ignore -v -z --stdin [6ms]
+2023-10-27 09:52:11.902 [info] > git status -z -uall [1058ms]
+2023-10-27 09:52:11.978 [warning] getRemotes() - ENOENT: no such file or directory, open '/home/sl2/S4005332/--git-common-dir/config'
+2023-10-27 09:52:11.985 [info] > git remote --verbose [7ms]
+2023-10-27 09:52:11.991 [info] > git config --get commit.template [7ms]
+2023-10-27 09:52:11.996 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname) refs/heads/master refs/remotes/master [6ms]
+2023-10-27 09:52:12.020 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [13ms]
+2023-10-27 09:52:12.523 [info] > git status -z -uall [522ms]
+2023-10-27 09:52:13.144 [info] > git check-ignore -v -z --stdin [8ms]
+2023-10-27 09:52:20.033 [info] > git check-ignore -v -z --stdin [467ms]
+2023-10-27 09:52:22.636 [info] > git check-ignore -v -z --stdin [41ms]
+2023-10-27 09:52:23.662 [info] > git show --textconv HEAD:.vscode-server/data/logs/20231027T093603/exthost4/exthost.log [12ms]
+2023-10-27 09:52:23.663 [info] > git ls-tree -l HEAD -- /home/sl2/S4005332/.vscode-server/data/logs/20231027T093603/exthost4/exthost.log [7ms]
+2023-10-27 09:52:23.663 [info] fatal: Not a valid object name HEAD
+2023-10-27 09:52:23.667 [info] > git check-ignore -v -z --stdin [5ms]
+2023-10-27 09:52:24.180 [info] > git check-ignore -v -z --stdin [4ms]
