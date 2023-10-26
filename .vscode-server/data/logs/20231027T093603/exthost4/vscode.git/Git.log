@@ -49,3 +49,107 @@ Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
 2023-10-27 09:52:23.663 [info] fatal: Not a valid object name HEAD
 2023-10-27 09:52:23.667 [info] > git check-ignore -v -z --stdin [5ms]
 2023-10-27 09:52:24.180 [info] > git check-ignore -v -z --stdin [4ms]
+2023-10-27 09:52:31.211 [info] > git add -A -- . [20395ms]
+2023-10-27 09:52:33.755 [info] > git -c user.useConfigOnly=true commit --quiet --allow-empty-message --file - --allow-empty-message [2537ms]
+2023-10-27 09:52:33.762 [info] > git config --get commit.template [1ms]
+2023-10-27 09:52:33.768 [warning] getRemotes() - ENOENT: no such file or directory, open '/home/sl2/S4005332/--git-common-dir/config'
+2023-10-27 09:52:33.773 [info] > git remote --verbose [5ms]
+2023-10-27 09:52:33.774 [info] > git config --get commit.template [2ms]
+2023-10-27 09:52:33.782 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname) refs/heads/master refs/remotes/master [2ms]
+2023-10-27 09:52:33.794 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [2ms]
+2023-10-27 09:52:33.909 [info] > git status -z -uall [123ms]
+2023-10-27 09:52:34.146 [warning] getRemotes() - ENOENT: no such file or directory, open '/home/sl2/S4005332/--git-common-dir/config'
+2023-10-27 09:52:34.152 [info] > git remote --verbose [6ms]
+2023-10-27 09:52:34.156 [info] > git config --get commit.template [5ms]
+2023-10-27 09:52:34.158 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname) refs/heads/master refs/remotes/master [2ms]
+2023-10-27 09:52:34.169 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [3ms]
+2023-10-27 09:52:34.290 [info] > git status -z -uall [128ms]
+2023-10-27 09:52:34.310 [info] > git remote add origin https://github.com/ahmadaabd/S4005332.git [10ms]
+2023-10-27 09:52:34.314 [warning] getRemotes() - ENOENT: no such file or directory, open '/home/sl2/S4005332/--git-common-dir/config'
+2023-10-27 09:52:34.320 [info] > git remote --verbose [6ms]
+2023-10-27 09:52:34.326 [info] > git config --get commit.template [7ms]
+2023-10-27 09:52:34.330 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname) refs/heads/master refs/remotes/master [5ms]
+2023-10-27 09:52:34.344 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [5ms]
+2023-10-27 09:52:34.470 [info] > git status -z -uall [135ms]
+2023-10-27 09:52:41.929 [info] > git add -A -- . [157ms]
+2023-10-27 09:52:42.177 [info] > git -c user.useConfigOnly=true commit --quiet [243ms]
+2023-10-27 09:52:42.177 [info] Error: Bad status code: 500
+    at ClientRequest.<anonymous> (/home/sl2/S4005332/.vscode-server/bin/441438abd1ac652551dbe4d408dfcec8a499b8bf/extensions/git/dist/git-editor-main.js:1:426)
+    at Object.onceWrapper (node:events:646:26)
+    at ClientRequest.emit (node:events:526:28)
+    at HTTPParser.parserOnIncomingClient (node:_http_client:618:27)
+    at HTTPParser.parserOnHeadersComplete (node:_http_common:128:17)
+    at Socket.socketOnData (node:_http_client:482:22)
+    at Socket.emit (node:events:526:28)
+    at addChunk (node:internal/streams/readable:315:12)
+    at readableAddChunk (node:internal/streams/readable:289:9)
+    at Socket.Readable.push (node:internal/streams/readable:228:10)
+error: There was a problem with the editor '"/home/sl2/S4005332/.vscode-server/bin/441438abd1ac652551dbe4d408dfcec8a499b8bf/extensions/git/dist/git-editor.sh"'.
+Please supply the message using either -m or -F option.
+2023-10-27 09:52:42.185 [info] > git config --get-all user.name [3ms]
+2023-10-27 09:52:42.190 [warning] getRemotes() - ENOENT: no such file or directory, open '/home/sl2/S4005332/--git-common-dir/config'
+2023-10-27 09:52:42.196 [info] > git remote --verbose [5ms]
+2023-10-27 09:52:42.200 [info] > git config --get commit.template [4ms]
+2023-10-27 09:52:42.204 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname) refs/heads/master refs/remotes/master [5ms]
+2023-10-27 09:52:42.217 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [4ms]
+2023-10-27 09:52:42.333 [info] > git status -z -uall [124ms]
+2023-10-27 09:52:50.734 [info] > git push -u origin master [16254ms]
+2023-10-27 09:52:50.734 [info] remote: warning: See https://gh.io/lfs for more information.        
+remote: warning: File .vscode-server/bin/441438abd1ac652551dbe4d408dfcec8a499b8bf/node is 76.60 MB; this is larger than GitHub's recommended maximum file size of 50.00 MB        
+remote: warning: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.        
+remote: To https://github.com/ahmadaabd/S4005332.git
+ * [new branch]      master -> master
+2023-10-27 09:52:50.740 [warning] getRemotes() - ENOENT: no such file or directory, open '/home/sl2/S4005332/--git-common-dir/config'
+2023-10-27 09:52:50.746 [info] > git remote --verbose [5ms]
+2023-10-27 09:52:50.750 [info] > git config --get commit.template [5ms]
+2023-10-27 09:52:50.756 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname) refs/heads/master refs/remotes/master [6ms]
+2023-10-27 09:52:50.764 [info] > git rev-list --left-right --count master...origin/master [5ms]
+2023-10-27 09:52:50.778 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [5ms]
+2023-10-27 09:52:50.913 [info] > git status -z -uall [145ms]
+2023-10-27 09:52:52.648 [info] > git check-ignore -v -z --stdin [8ms]
+2023-10-27 09:53:08.382 [info] > git check-ignore -v -z --stdin [4ms]
+2023-10-27 09:53:09.585 [info] > git check-ignore -v -z --stdin [6ms]
+2023-10-27 09:53:23.132 [info] > git check-ignore -v -z --stdin [5ms]
+2023-10-27 09:53:24.665 [info] > git check-ignore -v -z --stdin [8ms]
+2023-10-27 09:53:25.917 [info] > git check-ignore -v -z --stdin [11ms]
+2023-10-27 09:53:34.766 [info] > git -c user.useConfigOnly=true commit --quiet [315ms]
+2023-10-27 09:53:34.766 [info] Error: Bad status code: 500
+    at ClientRequest.<anonymous> (/home/sl2/S4005332/.vscode-server/bin/441438abd1ac652551dbe4d408dfcec8a499b8bf/extensions/git/dist/git-editor-main.js:1:426)
+    at Object.onceWrapper (node:events:646:26)
+    at ClientRequest.emit (node:events:526:28)
+    at HTTPParser.parserOnIncomingClient (node:_http_client:618:27)
+    at HTTPParser.parserOnHeadersComplete (node:_http_common:128:17)
+    at Socket.socketOnData (node:_http_client:482:22)
+    at Socket.emit (node:events:526:28)
+    at addChunk (node:internal/streams/readable:315:12)
+    at readableAddChunk (node:internal/streams/readable:289:9)
+    at Socket.Readable.push (node:internal/streams/readable:228:10)
+error: There was a problem with the editor '"/home/sl2/S4005332/.vscode-server/bin/441438abd1ac652551dbe4d408dfcec8a499b8bf/extensions/git/dist/git-editor.sh"'.
+Please supply the message using either -m or -F option.
+2023-10-27 09:53:34.775 [info] > git config --get-all user.name [3ms]
+2023-10-27 09:53:34.780 [warning] getRemotes() - ENOENT: no such file or directory, open '/home/sl2/S4005332/--git-common-dir/config'
+2023-10-27 09:53:34.785 [info] > git remote --verbose [5ms]
+2023-10-27 09:53:34.790 [info] > git config --get commit.template [6ms]
+2023-10-27 09:53:34.796 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname) refs/heads/master refs/remotes/master [7ms]
+2023-10-27 09:53:34.804 [info] > git rev-list --left-right --count master...origin/master [5ms]
+2023-10-27 09:53:34.816 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [4ms]
+2023-10-27 09:53:34.926 [info] > git status -z -uall [119ms]
+2023-10-27 09:53:53.877 [info] > git show --textconv :.vscode-server/data/logs/20231027T093603/exthost4/vscode.git/Git.log [10ms]
+2023-10-27 09:53:53.878 [info] > git ls-files --stage -- /home/sl2/S4005332/.vscode-server/data/logs/20231027T093603/exthost4/vscode.git/Git.log [6ms]
+2023-10-27 09:53:53.887 [info] > git cat-file -s df687383dfe5360cc0e253af195f4e96d722da7e [3ms]
+2023-10-27 09:53:55.680 [info] > git add -A -- /home/sl2/S4005332/.vscode-server/data/logs/20231027T093603/exthost4/vscode.git/Git.log [20ms]
+2023-10-27 09:53:55.686 [warning] getRemotes() - ENOENT: no such file or directory, open '/home/sl2/S4005332/--git-common-dir/config'
+2023-10-27 09:53:55.692 [info] > git remote --verbose [7ms]
+2023-10-27 09:53:55.697 [info] > git config --get commit.template [6ms]
+2023-10-27 09:53:55.702 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname) refs/heads/master refs/remotes/master [6ms]
+2023-10-27 09:53:55.710 [info] > git rev-list --left-right --count master...origin/master [4ms]
+2023-10-27 09:53:55.723 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [5ms]
+2023-10-27 09:53:55.859 [info] > git status -z -uall [145ms]
+2023-10-27 09:53:58.593 [info] > git add -A -- /home/sl2/S4005332/.vscode-server/data/logs/20231027T093603/exthost4/exthost.log [23ms]
+2023-10-27 09:53:58.600 [warning] getRemotes() - ENOENT: no such file or directory, open '/home/sl2/S4005332/--git-common-dir/config'
+2023-10-27 09:53:58.605 [info] > git remote --verbose [5ms]
+2023-10-27 09:53:58.610 [info] > git config --get commit.template [5ms]
+2023-10-27 09:53:58.615 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname) refs/heads/master refs/remotes/master [6ms]
+2023-10-27 09:53:58.622 [info] > git rev-list --left-right --count master...origin/master [4ms]
+2023-10-27 09:53:58.634 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [5ms]
+2023-10-27 09:53:58.759 [info] > git status -z -uall [134ms]
